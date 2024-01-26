@@ -1,0 +1,322 @@
+[
+    {
+        "#": "1",
+        "Campus": "Pilani",
+        "Department": "EEE",
+        "Faculty": "ABC",
+        "Year": "2023",
+        "Project": "DEF"
+    },
+    {
+        "#": "2",
+        "Campus": "Pilani",
+        "Department": "Physics",
+        "Faculty": "DEF",
+        "Year": "2022",
+        "Project": "GHI"
+    },
+    {
+        "#": "3",
+        "Campus": "Pilani",
+        "Department": "Chemistry",
+        "Faculty": "GHI",
+        "Year": "2021",
+        "Project": "JKL"
+    },
+    {
+        "#": "4",
+        "Campus": "Pilani",
+        "Department": "Mathematics",
+        "Faculty": "JKL",
+        "Year": "2020",
+        "Project": "MNO"
+    },
+    {
+        "#": "5",
+        "Campus": "Pilani",
+        "Department": "MechE",
+        "Faculty": "MNO",
+        "Year": "2019",
+        "Project": "PQR"
+    },
+    {
+        "#": "6",
+        "Campus": "Pilani",
+        "Department": "ChemE",
+        "Faculty": "PQR",
+        "Year": "2023",
+        "Project": "STU"
+    },
+    {
+        "#": "7",
+        "Campus": "Pilani",
+        "Department": "CivilE",
+        "Faculty": "STU",
+        "Year": "2022",
+        "Project": "VWX"
+    },
+    {
+        "#": "8",
+        "Campus": "Pilani",
+        "Department": "CSIS",
+        "Faculty": "VWX",
+        "Year": "2021",
+        "Project": "YZA"
+    },
+    {
+        "#": "9",
+        "Campus": "Pilani",
+        "Department": "HSS",
+        "Faculty": "YZA",
+        "Year": "2020",
+        "Project": "ABC"
+    },
+    {
+        "#": "10",
+        "Campus": "Pilani",
+        "Department": "Eco & Fin",
+        "Faculty": "ABC",
+        "Year": "2019",
+        "Project": "ABC"
+    },
+    {
+        "#": "11",
+        "Campus": "Dubai",
+        "Department": "EEE",
+        "Faculty": "ABC",
+        "Year": "2023",
+        "Project": "DEF"
+    },
+    {
+        "#": "12",
+        "Campus": "Dubai",
+        "Department": "Physics",
+        "Faculty": "DEF",
+        "Year": "2022",
+        "Project": "GHI"
+    },
+    {
+        "#": "13",
+        "Campus": "Dubai",
+        "Department": "Chemistry",
+        "Faculty": "GHI",
+        "Year": "2021",
+        "Project": "JKL"
+    },
+    {
+        "#": "14",
+        "Campus": "Dubai",
+        "Department": "Mathematics",
+        "Faculty": "JKL",
+        "Year": "2020",
+        "Project": "MNO"
+    },
+    {
+        "#": "15",
+        "Campus": "Dubai",
+        "Department": "MechE",
+        "Faculty": "MNO",
+        "Year": "2019",
+        "Project": "PQR"
+    },
+    {
+        "#": "16",
+        "Campus": "Dubai",
+        "Department": "ChemE",
+        "Faculty": "PQR",
+        "Year": "2023",
+        "Project": "STU"
+    },
+    {
+        "#": "17",
+        "Campus": "Dubai",
+        "Department": "CivilE",
+        "Faculty": "STU",
+        "Year": "2022",
+        "Project": "VWX"
+    },
+    {
+        "#": "18",
+        "Campus": "Dubai",
+        "Department": "CSIS",
+        "Faculty": "VWX",
+        "Year": "2021",
+        "Project": "YZA"
+    },
+    {
+        "#": "19",
+        "Campus": "Dubai",
+        "Department": "HSS",
+        "Faculty": "YZA",
+        "Year": "2020",
+        "Project": "ABC"
+    },
+    {
+        "#": "20",
+        "Campus": "Dubai",
+        "Department": "Eco & Fin",
+        "Faculty": "ABC",
+        "Year": "2019",
+        "Project": "ABC"
+    },
+    {
+        "#": "21",
+        "Campus": "Goa",
+        "Department": "EEE",
+        "Faculty": "ABC",
+        "Year": "2023",
+        "Project": "DEF"
+    },
+    {
+        "#": "22",
+        "Campus": "Goa",
+        "Department": "Physics",
+        "Faculty": "DEF",
+        "Year": "2022",
+        "Project": "GHI"
+    },
+    {
+        "#": "23",
+        "Campus": "Goa",
+        "Department": "Chemistry",
+        "Faculty": "GHI",
+        "Year": "2021",
+        "Project": "JKL"
+    },
+    {
+        "#": "24",
+        "Campus": "Goa",
+        "Department": "Mathematics",
+        "Faculty": "JKL",
+        "Year": "2020",
+        "Project": "MNO"
+    },
+    {
+        "#": "25",
+        "Campus": "Goa",
+        "Department": "MechE",
+        "Faculty": "MNO",
+        "Year": "2019",
+        "Project": "PQR"
+    },
+    {
+        "#": "26",
+        "Campus": "Goa",
+        "Department": "ChemE",
+        "Faculty": "PQR",
+        "Year": "2023",
+        "Project": "STU"
+    },
+    {
+        "#": "27",
+        "Campus": "Goa",
+        "Department": "CivilE",
+        "Faculty": "STU",
+        "Year": "2022",
+        "Project": "VWX"
+    },
+    {
+        "#": "28",
+        "Campus": "Goa",
+        "Department": "CSIS",
+        "Faculty": "VWX",
+        "Year": "2021",
+        "Project": "YZA"
+    },
+    {
+        "#": "29",
+        "Campus": "Goa",
+        "Department": "HSS",
+        "Faculty": "YZA",
+        "Year": "2020",
+        "Project": "ABC"
+    },
+    {
+        "#": "30",
+        "Campus": "Goa",
+        "Department": "Eco & Fin",
+        "Faculty": "ABC",
+        "Year": "2019",
+        "Project": "ABC"
+    },
+    {
+        "#": "31",
+        "Campus": "Hyderabad",
+        "Department": "EEE",
+        "Faculty": "ABC",
+        "Year": "2023",
+        "Project": "DEF"
+    },
+    {
+        "#": "32",
+        "Campus": "Hyderabad",
+        "Department": "Physics",
+        "Faculty": "DEF",
+        "Year": "2022",
+        "Project": "GHI"
+    },
+    {
+        "#": "33",
+        "Campus": "Hyderabad",
+        "Department": "Chemistry",
+        "Faculty": "GHI",
+        "Year": "2021",
+        "Project": "JKL"
+    },
+    {
+        "#": "34",
+        "Campus": "Hyderabad",
+        "Department": "Mathematics",
+        "Faculty": "JKL",
+        "Year": "2020",
+        "Project": "MNO"
+    },
+    {
+        "#": "35",
+        "Campus": "Hyderabad",
+        "Department": "MechE",
+        "Faculty": "MNO",
+        "Year": "2019",
+        "Project": "PQR"
+    },
+    {
+        "#": "36",
+        "Campus": "Hyderabad",
+        "Department": "ChemE",
+        "Faculty": "PQR",
+        "Year": "2023",
+        "Project": "STU"
+    },
+    {
+        "#": "37",
+        "Campus": "Hyderabad",
+        "Department": "CivilE",
+        "Faculty": "STU",
+        "Year": "2022",
+        "Project": "VWX"
+    },
+    {
+        "#": "38",
+        "Campus": "Hyderabad",
+        "Department": "CSIS",
+        "Faculty": "VWX",
+        "Year": "2021",
+        "Project": "YZA"
+    },
+    {
+        "#": "39",
+        "Campus": "Hyderabad",
+        "Department": "HSS",
+        "Faculty": "YZA",
+        "Year": "2020",
+        "Project": "ABC"
+    },
+    {
+        "#": "40",
+        "Campus": "Hyderabad",
+        "Department": "Eco & Fin",
+        "Faculty": "ABC",
+        "Year": "2019",
+        "Project": "ABC"
+    }
+]
