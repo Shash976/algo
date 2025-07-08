@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Filter</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<>
+
+    <label for="campus">Campus:</label>
+    <select id="campus" onchange="updateDropdown('campus', 'department')"></select>
+
+    <label for="department">Department:</label>
+    <select id="department" onchange="updateDropdown('department', 'faculty')"></select>
+
+    <label for="faculty">Faculty:</label>
+    <select id="faculty" onchange="updateDropdown('faculty', 'year')"></select>
+
+    <label for="year">Year:</label>
+    <select id="year" onchange="updateDropdown('year', 'project')"></select>
+
+    <label for="project">Project:</label>
+    <select id="project"></select>
+
+    <button onclick="filterData()">Filter</button>
+    <button onclick="resetFilters()">Reset</button>
+
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Campus</th>
+                <th>Department</th>
+                <th>Faculty</th>
+                <th>Year</th>
+                <th>Project</th>
+            </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+    </table>
+
+<script>
+    // Function to load JSON data from file
+    async function loadData() {
+        try {
+            const response = await fetch('test.json');
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error loading data:', error);
+        }
+    }
+
+    // Function to populate dropdowns with options
+    async function populateDropdowns() {
+        const projects = await loadData();
+
+        const filters = ["Campus", "Department", "Faculty", "Year", "Project"];
+
+        filters.forEach(filter => {
+            const dropdown = document.getElementById(filter.toLowerCase());
+
+            if (dropdown) {
+                // Add "Any" option
+                const anyOption = document.createElement("option");
+                anyOption.text = "Any";
+                dropdown.add(anyOption);
+
+                // Populate with unique values
+                const values = [...new Set(projects.map(project => project[filter]))];
+                values.forEach(value => {
+                    const option = document.createElement("option");
+                    option.text = value;
+                    dropdown.add(option);
+                });
+            } else {
+                console.error(`Dropdown with ID ${filter.toLowerCase()} not found.`);
+            }
+        });
+    }
+
+    // Function to filter data
+    async function filterData() {
+        const projects = await loadData();
+
+        const criteria = {};
+        const filters = ["Campus", "Department", "Faculty", "Year", "Project"];
+
+        filters.forEach(filter => {
+            const dropdown = document.getElementById(filter.toLowerCase());
+            if (dropdown) {
+                criteria[filter] = dropdown.value === "Any" ? "" : dropdown.value;
+            } else {
+                console.error(`Dropdown with ID ${filter.toLowerCase()} not found.`);
+            }
+        });
+
+        const filteredData = projects.filter(project => {
+            return filters.every(filter => criteria[filter] === "" || project[filter] === criteria[filter]);
+        });
+
+        displayResults(filteredData);
+    }
+
+    // Function to display results in table
+    function displayResults(data) {
+        const tableBody = document.getElementById("resultBody");
+        tableBody.innerHTML = "";
+
+        data.forEach(project => {
+            const row = tableBody.insertRow();
+            Object.values(project).forEach(value => {
+                const cell = row.insertCell();
+                cell.textContent = value;
+            });
+        });
+    }
+
+    // Load data and populate dropdowns on page load
+    window.onload = async function () {
+        await populateDropdowns();
+    };
+
+    // Reset filters
+    function resetFilters() {
+            const filters = ["Campus", "Department", "Faculty", "Year", "Project"];
+            
+            filters.forEach(filter => {
+                const dropdown = document.getElementById(filter.toLowerCase());
+                if (dropdown) {
+                    dropdown.value = "Any";
+                } else {
+                    console.error(`Dropdown with ID ${filter.toLowerCase()} not found.`);
+                }
+            });
+
+            // Clear the table
+            const tableBody = document.getElementById("resultBody");
+            tableBody.innerHTML = "";
+        }
+
+    // Function to update dropdowns
+    // Function to update dropdown based on selected value
+    function updateDropdown(currentDropdownId, nextDropdownId) {
+            const selectedValue = document.getElementById(currentDropdownId).value;
+            const nextDropdown = document.getElementById(nextDropdownId);
+
+            // Clear existing options
+            nextDropdown.innerHTML = "<option value='Any'>Any</option>";
+
+            // Populate with unique values based on selected value
+            const values = [...new Set(projects.filter(project => project[currentDropdownId] === selectedValue).map(project => project[nextDropdownId.slice(0, -2)]))];
+            values.forEach(value => {
+                const option = document.createElement("option");
+                option.text = value;
+                nextDropdown.add(option);
+            });
+        }
+
+    const spreadsheetId = "1CClhaLeb27oyuM-eUX3Ex3blG01o5TwfLMg101jmFYs";
+    async function fetchData(spreadsheetId) {
+        const url = `https://docs.google.com/spreadsheets/d/${spreadsheetId}/gviz/tq?tqx=out:json`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.text();
+
+            // Parse the response data
+            const start = data.indexOf("{");
+            const end = data.lastIndexOf("}") + 1;
+            const jsonData = JSON.parse(data.substring(start, end));
+
+            // Extract the rows from the response
+            const rows = jsonData.table.rows;
+
+            // Process the rows as needed
+            // ...
+
+            return rows;
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            return null;
+        }
+    }
+</script>
+
+</body>
+</html>
